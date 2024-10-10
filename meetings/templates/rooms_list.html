@@ -1,0 +1,27 @@
+<div class="rooms-section">
+
+    <h2>Rooms</h2>
+
+    <ul>
+
+        {% for room in rooms %}
+
+        <li>
+
+            <a href="{% url 'room_detail' room.id %}">
+
+                {{ room.name }}
+
+            </a>
+
+        </li>
+
+        {% empty %}
+
+        <li>No rooms available at the moment.</li>
+
+        {% endfor %}
+
+    </ul>
+
+</div>
